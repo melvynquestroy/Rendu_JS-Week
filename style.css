@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+}
+
+/* DARK & LIGHT MODE */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border1: rgba(255, 255, 255, 0.5);
+    --glass-border2: rgba(255, 255, 255, 0.2);
+    --background-color: #111111;
+    --text-color: #ffffff;
+    /* --background-color: #f5f5f5;
+    --text-color: #000000; */
+    --hover-spread: 2px;
+}
+
+body.dark {
+    --background-color: #f5f5f5;
+    --text-color: #000000;
+    /* --background-color: #111111;
+    --text-color: #ffffff; */
+}
+
+/* HEADER */
+.headerClass {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    max-width: 1200px;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+}
+
+.headerListClass {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px) saturate(200%);
+    border-radius: 25px;
+    border: 1px solid var(--glass-border1);
+    border-right: 1px solid var(--glass-border2);
+    border-bottom: 1px solid var(--glass-border2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 25px;
+}
+
+.headerListClass li {
+    list-style: none;
+}
+
+.headerListClass a {
+    color: #ffffff;
+    padding: 15px 25px;
+    transition: letter-spacing 0.3s;
+}
+
+.headerListClass a:hover {
+    letter-spacing: var(--hover-spread);
+}
+
+button {
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px) saturate(200%);
+    border-radius: 25px;
+    border: 1px solid var(--glass-border1);
+    border-right: 1px solid var(--glass-border2);
+    border-bottom: 1px solid var(--glass-border2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 15px 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* MENU JS */
+.menuIconClass {
+    width: 32px;
+    height: 32px;
+}
+
+.dropdownMenuClass {
+    position: absolute;
+    top: 75px;
+    right: -40px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px) saturate(200%);
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border1);
+    border-right: 1px solid var(--glass-border2);
+    border-bottom: 1px solid var(--glass-border2);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.dropdownMenuClass.open {
+    display: flex;
+}
+
+/* MAIN PICTURES */
+main {
+    min-height: 200vh;
+    background: var(--background-color);
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.cardListClass {
+    columns: 300px;
+}
+
+.cardListClass a {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 15px;
+    backdrop-filter: blur(5px) saturate(200%);
+    overflow: hidden;
+    border: 1px solid var(--glass-border1);
+    border-right: 1px solid var(--glass-border2);
+    border-bottom: 1px solid var(--glass-border2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.cardListClass a:hover {
+    transform: scale(1.05);
+}
+
+.cardListClass img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* FOOTER */
+.footerClass {
+    background: var(--background-color);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logoImgClass{
+    height: 200px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 45px;
+}
+
+.contactBtnClass a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footerLinksClass {
+    color: var(--text-color);
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+.footerLinksClass a {
+    color: var(--text-color);
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footerLegalClass {
+    color: var(--text-color);
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.footerLegalClass a {
+    color: var(--text-color);
+}
+
+/* LOG IN */
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+    background-image: url(./Files/Pictures/background02.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box{
+    position: relative;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(5px) saturate(200%);
+    border: none;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h1{
+    position: relative;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background-color: white;
+}
+
+.form .inputBox{
+    width: 100%;
+    margin-top: 20px;
+}
+
+form .inputBox input{
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.form .inputBox input::placeholder{
+    color: white;
+}
+
+.form .inputBox input[type="submit"]{
+    background: white;
+    color: #666;
+    max-width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.forget{
+    margin-top: 5px;
+    color: white;
+}
+
+.forget a{
+    color: white;
+    font-weight: 600;
+}
